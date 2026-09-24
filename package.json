@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:client\"",
+    "dev:client": "next dev",
+    "dev:api": "npm --prefix agro-shop-sh-api run start:dev",
+    "build": "npm run build:client && npm run build:api",
+    "build:client": "next build",
+    "build:api": "npm --prefix agro-shop-sh-api run build",
     "start": "next start",
-    "lint": "eslint"
+    "start:api": "npm --prefix agro-shop-sh-api run start:prod",
+    "lint": "eslint . && npm --prefix agro-shop-sh-api run lint",
+    "lint:client": "eslint ."
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -24,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^9.1.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
