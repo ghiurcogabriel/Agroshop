@@ -1,0 +1,15 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="springBg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3c6e47" />
+      <stop offset="1" stop-color="#23412a" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#springBg)" />
+  <path d="M1050 290C1050 375 980 444 892 444C804 444 734 375 734 290C734 204 804 135 892 135C980 135 1050 204 1050 290Z" fill="#f2ffef" fill-opacity="0.2" />
+  <path d="M1120 430C1120 507 1057 570 980 570C902 570 840 507 840 430C840 353 902 290 980 290C1057 290 1120 353 1120 430Z" fill="#f2ffef" fill-opacity="0.15" />
+  <rect x="130" y="500" width="760" height="40" rx="20" fill="#d9f2de" fill-opacity="0.35" />
+  <rect x="160" y="400" width="530" height="76" rx="20" fill="#d9f2de" fill-opacity="0.28" />
+  <circle cx="230" cy="230" r="60" fill="#b6dfc0" fill-opacity="0.8" />
+  <circle cx="320" cy="180" r="42" fill="#cfead4" fill-opacity="0.88" />
+</svg>

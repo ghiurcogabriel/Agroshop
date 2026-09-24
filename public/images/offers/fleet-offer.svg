@@ -1,0 +1,15 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fleetBg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2f5f95" />
+      <stop offset="1" stop-color="#19334f" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#fleetBg)" />
+  <circle cx="1010" cy="370" r="210" fill="#ffffff" fill-opacity="0.16" />
+  <circle cx="890" cy="430" r="170" fill="#ffffff" fill-opacity="0.12" />
+  <rect x="120" y="520" width="720" height="36" rx="18" fill="#ffffff" fill-opacity="0.3" />
+  <rect x="140" y="420" width="490" height="74" rx="20" fill="#ffffff" fill-opacity="0.25" />
+  <rect x="820" y="480" width="250" height="92" rx="24" fill="#d5e6ff" fill-opacity="0.75" />
+  <rect x="880" y="410" width="250" height="92" rx="24" fill="#d5e6ff" fill-opacity="0.58" />
+</svg>

@@ -1,0 +1,89 @@
+<svg viewBox="0 0 1400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Green gradient background -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7BC700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5A9600;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Light beam gradient -->
+    <radialGradient id="lightBeam" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Tire gradient for 3D effect -->
+    <linearGradient id="tireGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A4A4A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2A2A2A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="500" fill="url(#greenGradient)"/>
+  
+  <!-- Light beams -->
+  <circle cx="150" cy="250" r="120" fill="url(#lightBeam)"/>
+  <circle cx="1250" cy="250" r="120" fill="url(#lightBeam)"/>
+  
+  <!-- Center platform -->
+  <ellipse cx="700" cy="380" rx="500" ry="80" fill="#FFFFFF" opacity="0.15"/>
+  
+  <!-- Left tire -->
+  <g transform="translate(280, 280)">
+    <!-- Tire outer -->
+    <circle cx="0" cy="0" r="110" fill="url(#tireGradient)"/>
+    <!-- Tire tread pattern -->
+    <circle cx="0" cy="0" r="100" fill="#3A3A3A"/>
+    <g opacity="0.6">
+      <line x1="-80" y1="-60" x2="-90" y2="-70" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="-50" y1="-95" x2="-55" y2="-108" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="-100" x2="25" y2="-115" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="75" y1="-80" x2="88" y2="-92" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="95" y1="-35" x2="110" y2="-40" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="90" y1="35" x2="107" y2="42" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="70" y1="85" x2="82" y2="100" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="105" x2="24" y2="120" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="-50" y1="100" x2="-58" y2="115" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="-85" y1="70" x2="-98" y2="82" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <!-- Tire rim/center -->
+    <circle cx="0" cy="0" r="45" fill="#6B6B6B"/>
+    <circle cx="0" cy="0" r="30" fill="#FFD700"/>
+  </g>
+  
+  <!-- Right tire -->
+  <g transform="translate(1120, 280)">
+    <!-- Tire outer -->
+    <circle cx="0" cy="0" r="110" fill="url(#tireGradient)"/>
+    <!-- Tire tread pattern -->
+    <circle cx="0" cy="0" r="100" fill="#3A3A3A"/>
+    <g opacity="0.6">
+      <line x1="-80" y1="-60" x2="-90" y2="-70" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="-50" y1="-95" x2="-55" y2="-108" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="-100" x2="25" y2="-115" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="75" y1="-80" x2="88" y2="-92" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="95" y1="-35" x2="110" y2="-40" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="90" y1="35" x2="107" y2="42" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="70" y1="85" x2="82" y2="100" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="20" y1="105" x2="24" y2="120" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="-50" y1="100" x2="-58" y2="115" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+      <line x1="-85" y1="70" x2="-98" y2="82" stroke="#2A2A2A" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <!-- Tire rim/center -->
+    <circle cx="0" cy="0" r="45" fill="#6B6B6B"/>
+    <circle cx="0" cy="0" r="30" fill="#FFD700"/>
+  </g>
+  
+  <!-- Text content on the left -->
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF">
+    Descoperă Anvelopele
+  </text>
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF">
+    Noastre Second Hand
+  </text>
+  <text x="100" y="240" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF">
+    de Calitate
+  </text>
+</svg>
