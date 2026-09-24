@@ -1,0 +1,67 @@
+---
+environments:
+  local:
+    values:
+      - ingressNginxController:
+          version: 4.5.2
+          enabled: true
+      - bitnamiMySqlDbCluster:
+          version: 9.5.0
+          enabled: true
+      - heitsApusenicupApi:
+          version: latest
+          enabled: true
+  staging:
+    values:
+      - heitsApusenicupApi:
+          enabled: true
+  production:
+    values:
+      - heitsApusenicupApi:
+          enabled: true
+
+---
+helmDefaults:
+  createNamespace: true
+  atomic: true
+  wait: true
+  timeout: 600
+
+repositories:
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+  - name: ingress-nginx
+    url: https://kubernetes.github.io/ingress-nginx
+
+releases:
+  - name: ingress-nginx
+    namespace: ingress-nginx
+    chart: ingress-nginx/ingress-nginx
+    # Override chart version based on environment requirements 
+    # (as stated in the `environments` section from this Helmfile)
+    version: {{ .Values | get "ingressNginxController.version" "4.5.2" }}
+    # Install Nginx ingress controller based on environment requirements
+    installed: {{ .Values | get "ingressNginxController.enabled" false }}
+    labels:
+      tier: ingress
+    values:
+      - "./helm/values/ingress-nginx/{{ .Environment.Name }}.yaml"
+  
+  - name: "mysql-{{ .Environment.Name }}"
+    namespace: db
+    chart: bitnami/mysql
+    version: {{ .Values | get "bitnamiMySqlDbCluster.version" "9.5.0" }}
+    installed: {{ .Values | get "bitnamiMySqlDbCluster.enabled" false }}
+    labels:
+      tier: database
+    values:
+      - "./helm/values/bitnami-mysql/{{ .Environment.Name }}.yaml"
+
+  - name: "heits-apusenicup-api-{{ .Environment.Name }}"
+    namespace: "{{ .Environment.Name }}"
+    chart: ./helm/charts/heits-apusenicup-api
+    installed: {{ .Values | get "heitsApusenicupApi.enabled" false }}
+    labels:
+      tier: backend
+    values:
+      - "./helm/values/heits-apusenicup-api/{{ .Environment.Name }}.yaml"

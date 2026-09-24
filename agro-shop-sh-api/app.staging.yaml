@@ -1,0 +1,3 @@
+runtime: nodejs20
+service: agro-shop-sh-api-staging
+entrypoint: npm run start:prod
